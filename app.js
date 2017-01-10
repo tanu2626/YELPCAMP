@@ -8,7 +8,13 @@ app.set("view engine", "ejs")
 var campgrounds = [
   {name: "Salmon Creek", image: "http://onmilwaukee.com/images/articles/ca/camping/camping_fullsize_story1.jpg?20080730123152"},
   {name: "Granite Hill", image: "https://savannahwaydrive.files.wordpress.com/2012/11/northern-territory-camping.jpg"},
-  {name: "Mountain Goat's Rest", image: "http://media.mnn.com/assets/images/2015/09/tents-at-night-3.jpg.838x0_q80.jpg"}
+  {name: "Mountain Goat's Rest", image: "http://media.mnn.com/assets/images/2015/09/tents-at-night-3.jpg.838x0_q80.jpg"},
+  {name: "Salmon Creek", image: "http://onmilwaukee.com/images/articles/ca/camping/camping_fullsize_story1.jpg?20080730123152"},
+  {name: "Salmon Creek", image: "http://onmilwaukee.com/images/articles/ca/camping/camping_fullsize_story1.jpg?20080730123152"},
+  {name: "Granite Hill", image: "https://savannahwaydrive.files.wordpress.com/2012/11/northern-territory-camping.jpg"},
+  {name: "Mountain Goat's Rest", image: "http://media.mnn.com/assets/images/2015/09/tents-at-night-3.jpg.838x0_q80.jpg"},
+  {name: "Salmon Creek", image: "http://onmilwaukee.com/images/articles/ca/camping/camping_fullsize_story1.jpg?20080730123152"}
+
 ]
 
 // LANDING PAGE
