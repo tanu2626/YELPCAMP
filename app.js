@@ -1,9 +1,40 @@
 var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
+// require mongoose
+var mongoose= require("mongoose");
+
+//connect to mongoose
+mongoose.connect("mongodb://localhost/yelp_camp");
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs")
+
+//schema setup
+var campgroundSchema = new mongoose.Schema({
+    name: String,
+    image: String
+});
+
+
+//make a model that use above schema
+var Campground = mongoose.model("Campground", campgroundSchema);
+
+//add /create in one campground
+
+Campground.create(
+    {
+      name: "Salmon Creek",
+      image: "http://onmilwaukee.com/images/articles/ca/camping/camping_fullsize_story1.jpg?20080730123152"
+    }, function(err, campground) {
+        if(err){
+          console.log(err);
+        }else {
+          console.log("NEWLY CREATED CAMPGROUND: ");
+          console.log(campground);
+        }
+});
+
 
 var campgrounds = [
   {name: "Salmon Creek", image: "http://onmilwaukee.com/images/articles/ca/camping/camping_fullsize_story1.jpg?20080730123152"},
